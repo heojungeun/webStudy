@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body >
+		<h1>Object</h1>
+		<h2>Create</h2>
+		<script>
+			var cow = {
+				"programmer":"ego",
+				"designer":"letsi",
+			};
+			document.write("programmer :"+cow.programmer+"<br>");
+			document.write("designer :"+cow.designer+"<br>");
+			cow.bookkeeper= "duru";
+			document.write("bookkeeper :"+cow.bookkeeper+"<br>");
+			cow["data scientist"]= "taeho";
+			document.write("data scientist :"+cow["data scientist"]+"<br>");
+		</script>
+		<h2>Iterate</h2>
+		<script>
+			for(var key in cow){
+				document.write(key+' : '+cow[key]+"<br>");
+			}
+			
+		</script>
+		<h2>Property & Method</h2>
+		<script>
+			cow.showAll = function(left,right){
+				for(var key in this){
+					document.write(key+' : '+cow[key]+left+' '+right+"<br>");
+				}
+				
+			}
+			cow.showAll(4,5);
+		</script>
+		
+	</body>
+</html>
